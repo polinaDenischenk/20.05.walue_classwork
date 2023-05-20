@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Prosto+One&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Wallet</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1 class="title">Wallet</h1>
+        </header>
+
+        <div class="main">
+            <div class="main__column">
+                <div class="diagram-block">
+                    <div class="diagram-title">Диаграмма расходов</div>
+                    <div class="diagram">
+                        <div class="canvas">
+                            <svg class="chart" width="500" height="500" viewBox="0 0 50 50">
+                                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="legend">
+                    <ul class="caption-list">
+                        <li class="caption-item">Продукты</li>
+                        <li class="caption-item">ФастФуд</li>
+                        <li class="caption-item">Спорт</li>
+                        <li class="caption-item">Напитки</li>
+
+                        <ul class="legend_list">
+                            <li class="legent__item">
+                                <!-- <span class="legend__desc">ФастФуд</span>
+                                <div class="legend__price">2000₽</div> -->
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="main_column" id="table__column">
+                <table class="table">
+                    <thead>
+                        <tr class="table__row">
+                            <td class="name">Наименование</td>
+                            <td class="category">категория</td>
+                            <td class="price">цена</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table__row">
+                            <td class="name">бургер</td>
+                            <td class="category">ФастФуд</td>
+                            <td class="price">500₽</td>
+                            <!-- <td>удалить</td> -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="add-block">
+                <!-- <input type="text" placeholder="Добавить задачу" id="taskInput">  -->
+
+
+                <div class="list">
+                    <!-- <div class="symbols">
+                    <i class="fa-sharp fa-solid fa-trash"></i>
+                    <i class="fa-solid fa-check"></i>
+                </div> -->
+                </div>
+            </div>
+            <div class="main__column" id="editor-column">
+                <form class="editor" name="form">
+                    <div class="editor_row">
+                        <p class="editor__input-name">Товар</p>
+                        <input type="text" placeholder="Наименование" class="editor__input" name="name">
+                    </div>
+                    <div class="editor_row">
+                        <p class="editor__input-name">Цена</p>
+                        <input type="text" placeholder="0" class="editor__input" name="price">
+                    </div>
+                    <div class="editor_row">
+                        <p class="editor__input-name">Категория</p>
+                        <select name="editor__select" id="selectCategory" id="selectCategory" name="">
+                            <option value="priduct">Продукты</option>
+                            <option value="priduct">Напитки</option>
+                            <option value="priduct">Снеки</option>
+                        </select>
+                    </div>
+                    <button id="addBtn" name="btn">Добавить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,359 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: black;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul > li {
+  list-style: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  padding: 0px 10px;
+  margin-left: 10px;
+}
+
+.title {
+  font-family: "Verdana", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #f3e1ee;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: rgb(55, 55, 55);
+  border-radius: 5px;
+  padding-right: 50px;
+}
+
+#table-colum {
+  flex: 1;
+  padding: 0px 20px;
+}
+
+.table {
+  width: 500px;
+  text-align: center;
+  background-color: rgb(92, 92, 92);
+  border-radius: 5px;
+  margin-left: 297px;
+}
+
+.editor__input-name {
+  color: rgb(255, 255, 255);
+}
+
+.name {
+  font-size: 20px;
+  color: beige;
+}
+
+.category {
+  font-size: 20px;
+  color: beige;
+}
+
+.price {
+  font-size: 20px;
+  color: beige;
+}
+
+.editor_row {
+  color: beige;
+  font-size: 22px;
+}
+
+.diagram-title {
+  font-size: 28px;
+  position: relative;
+  color: white;
+  margin: 10px;
+  font-family: "Climate Crisis", cursive;
+  font-family: "Prosto One", cursive;
+}
+
+.legend__desc {
+  margin: 10px;
+  background-color: rgb(90, 90, 90);
+  border-radius: 2px;
+  font-size: 20px;
+  display: flex;
+  bottom: 100px;
+  color: rgb(199, 130, 0);
+}
+
+.legend__price {
+  text-align: center;
+  width: 60px;
+  height: 25px;
+  display: flex;
+  bottom: 125px;
+  left: 90px;
+  background-color: rgb(90, 90, 90);
+  border-radius: 2px;
+}
+
+/* диаграмма */
+
+@keyframes render {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #000000;
+}
+
+.canvas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 300px;
+}
+
+.legend {
+  max-width: 250px;
+  margin-left: 30px;
+}
+
+.title {
+  font-family: "Verdana", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.caption-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.caption-item {
+  position: relative;
+
+  margin: 20px 0;
+  padding-left: 30px;
+
+  font-family: "Verdana", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.caption-item:hover {
+  opacity: 0.8;
+}
+
+.caption-item::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 8px;
+}
+
+.caption-item:nth-child(1)::before {
+  background-color: #ade366;
+}
+
+.caption-item:nth-child(2)::before {
+  background-color: #70b4e4;
+}
+
+.caption-item:nth-child(3)::before {
+  background-color: #815c8e;
+}
+
+.caption-item:nth-child(4)::before {
+  background-color: #f6833c;
+}
+
+.caption-item:nth-child(5)::before {
+  background-color: #b2dbd5;
+}
+
+.caption-item:nth-child(6)::before {
+  background-color: #f2c48f;
+}
+
+.caption-item:nth-child(7)::before {
+  background-color: #d340ac;
+}
+
+.chart {
+  min-width: 500px;
+}
+
+.unit {
+  fill: none;
+  stroke-width: 10;
+  cursor: pointer;
+
+  animation-name: render;
+  animation-duration: 1.5s;
+  transition-property: all;
+  transition-duration: 1.5s;
+}
+
+.unit:hover,
+.hovered {
+  opacity: 0.8;
+  stroke-width: 12;
+}
+
+.unit:nth-child(1) {
+  stroke: #ade366;
+  stroke-dasharray: 8 100;
+}
+
+.unit:nth-child(2) {
+  stroke: #70b4e4;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -8;
+}
+
+.unit:nth-child(3) {
+  stroke: #815c8e;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -19;
+}
+
+.unit:nth-child(4) {
+  stroke: #f6833c;
+  stroke-dasharray: 14 100;
+  stroke-dashoffset: -30;
+}
+
+.unit:nth-child(5) {
+  stroke: #b2dbd5;
+  stroke-dasharray: 11 100;
+  stroke-dashoffset: -44;
+}
+
+.unit:nth-child(6) {
+  stroke: #f2c48f;
+  stroke-dasharray: 5 100;
+  stroke-dashoffset: -55;
+}
+
+.unit:nth-child(7) {
+  stroke: #d340ac;
+  stroke-dasharray: 40 100;
+  stroke-dashoffset: -60;
+}
+
+/* кнопки удаления и добавления */
+
+.container {
+  max-width: 1070px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Блок добавления задачи (поле и кнопка) */
+.add-block {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 3px;
+  /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.514); */
+  flex-basis: 450px;
+}
+
+/* Поле ввода */
+#taskInput {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  flex: 1 1 450px;
+}
+
+/* Плейсхолдер */
+#taskInput::placeholder {
+  color: #c5ccd8;
+}
+
+/* Кнопка добавления задачи */
+#addBtn {
+  background-color: rgb(228, 230, 240);
+  margin-top: 30px;
+  padding: 10px 30px;
+}
+
+/* Список задач */
+
+#list {
+  margin: 0 auto;
+  max-width: 450px;
+  background-color: black;
+}
+
+/* Элемент списка */
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.514); */
+  background-color: white;
+}
+
+/* Запретить ужиматься блоку с кнопками в элементе списка*/
+.item__btns {
+  flex-shrink: 0;
+}
+
+/* Символ корзины */
+.fa-sharp fa-solid fa-trash {
+  margin-right: 20px;
+}
+
+/* Символ чекбокса */
+.fa-square-check {
+  margin-right: 20px;
+}
+
+/* Поведение элемента списка если добавлен класс .done */
+.item.done {
+  text-decoration: line-through;
+}
